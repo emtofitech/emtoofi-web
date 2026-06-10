@@ -32,10 +32,10 @@ export default function Footer() {
         </div>
         <div className="footer-col">
           <h4>Connect</h4>
-          <a>LinkedIn</a>
-          <a>Twitter / X</a>
-          <a>GitHub</a>
-          <a>emtofitechnologies@gmail.com</a>
+          <a href=''>LinkedIn</a>
+          <a href='https://x.com/home'>Twitter / X</a>
+          <a href='https://www.instagram.com/emtofitechnologies/'>instagram</a>
+          <a href='mailto:emtofitechnologies@gmail.com'>emtofitechnologies@gmail.com</a>
         </div>
       </div>
       <div className="footer-bottom">
