@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { BsLightningChargeFill, BsBullseye } from 'react-icons/bs';
+import { FaHandshake } from 'react-icons/fa';
 import HeroCanvas from '@/components/HeroCanvas';
 import TypedText from '@/components/TypedText';
 import CounterStats from '@/components/CounterStats';
@@ -52,21 +54,21 @@ export default function HomePage() {
         <div className="why-grid">
           <FadeUp delay={1}>
             <div className="why-card">
-              <div className="why-icon">⚡</div>
+              <div className="why-icon"><BsLightningChargeFill /></div>
               <h3>Invest smart, not big</h3>
               <p>We calculate exactly what will move the needle. No wasted retainers, no vague scoping. Every sprint has a clear, tangible output you can see and ship.</p>
             </div>
           </FadeUp>
           <FadeUp delay={2}>
             <div className="why-card">
-              <div className="why-icon">🎯</div>
+              <div className="why-icon"><BsBullseye /></div>
               <h3>Built for your scale</h3>
               <p>Whether you&apos;re a 3-person startup or a 300-person enterprise, our process adapts to your pace, your team, and your ambition without the complexity.</p>
             </div>
           </FadeUp>
           <FadeUp delay={3}>
             <div className="why-card">
-              <div className="why-icon">🤝</div>
+              <div className="why-icon"><FaHandshake /></div>
               <h3>Partners, not vendors</h3>
               <p>We become an extension of your team. We take ownership of outcomes — not just deliverables — because your growth is the only metric that matters.</p>
             </div>

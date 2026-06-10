@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -36,8 +37,8 @@ export default function Navbar() {
           background: scrolled ? 'rgba(245,244,238,.97)' : 'rgba(245,244,238,.85)',
         }}
       >
-        <Link href="/" className="nav-logo">
-          <div className="nav-logo-mark">E</div>
+        <Link href="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <Image src="/logo.Jpeg" alt="EmtooFi Logo" width={40} height={40} style={{ borderRadius: '8px' }} />
           <div>
             <div className="nav-logo-text">EmtooFi</div>
             <div className="nav-logo-sub">Technologies Ltd</div>

@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import FadeUp from './FadeUp';
+import { FaCreditCard, FaHospital, FaTruck, FaShoppingBag, FaChartBar, FaMobileAlt } from 'react-icons/fa';
 
 interface Project {
   id: number;
   categories: string;
   bg: string;
-  icon: string;
+  icon: React.ReactNode;
   category: string;
   year: string;
   title: string;
@@ -21,7 +22,7 @@ const projects: Project[] = [
     id: 1,
     categories: 'fintech web',
     bg: 'proj-bg-1',
-    icon: '💳',
+    icon: <FaCreditCard />,
     category: 'Fintech · Web platform',
     year: '2024',
     title: 'Enterprise payment dashboard for a Lagos-based fintech',
@@ -33,7 +34,7 @@ const projects: Project[] = [
     id: 2,
     categories: 'mobile',
     bg: 'proj-bg-2',
-    icon: '🏥',
+    icon: <FaHospital />,
     category: 'Healthtech · Mobile',
     year: '2024',
     title: 'Patient-facing mobile app for a healthcare startup',
@@ -44,7 +45,7 @@ const projects: Project[] = [
     id: 3,
     categories: 'web saas',
     bg: 'proj-bg-3',
-    icon: '🚚',
+    icon: <FaTruck />,
     category: 'Logistics · SaaS',
     year: '2024',
     title: 'Fleet tracking SaaS for a transport enterprise',
@@ -55,7 +56,7 @@ const projects: Project[] = [
     id: 4,
     categories: 'web mobile',
     bg: 'proj-bg-4',
-    icon: '🛍️',
+    icon: <FaShoppingBag />,
     category: 'E-commerce · Web + Mobile',
     year: '2023',
     title: 'End-to-end e-commerce platform for a retail brand',
@@ -66,7 +67,7 @@ const projects: Project[] = [
     id: 5,
     categories: 'saas fintech',
     bg: 'proj-bg-5',
-    icon: '📊',
+    icon: <FaChartBar />,
     category: 'Fintech · SaaS',
     year: '2023',
     title: 'SME lending platform with AI-assisted credit scoring',
@@ -77,7 +78,7 @@ const projects: Project[] = [
     id: 6,
     categories: 'mobile',
     bg: 'proj-bg-6',
-    icon: '📱',
+    icon: <FaMobileAlt />,
     category: 'Productivity · Mobile',
     year: '2023',
     title: 'Team accountability & screen-time app for remote teams',
