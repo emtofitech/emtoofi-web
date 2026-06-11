@@ -55,9 +55,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" className={`nav-cta${pathname === '/contact' ? ' active' : ''}`}>
-            Contact us
-          </Link>
+          <Link href="/contact" className={`nav-cta${pathname === '/contact' ? ' active' : ''}`}>Contact us</Link>
         </div>
         <button
           className={`mobile-menu-btn${mobileOpen ? ' open' : ''}`}
@@ -75,9 +73,7 @@ export default function Navbar() {
             {link.label}
           </Link>
         ))}
-        <Link href="/contact" className="btn-green" onClick={() => setMobileOpen(false)}>
-          Contact us
-        </Link>
+        <Link href="/contact" className="btn-green" onClick={() => setMobileOpen(false)}>Contact us</Link>
       </div>
     </>
   );

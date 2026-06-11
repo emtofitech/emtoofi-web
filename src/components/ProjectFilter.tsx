@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import FadeUp from './FadeUp';
-import { FaCreditCard, FaHospital, FaTruck, FaShoppingBag, FaChartBar, FaMobileAlt } from 'react-icons/fa';
+import { FaCreditCard, FaHospital, FaTruck, FaShoppingBag, FaChartBar, FaMobileAlt, FaCoins } from 'react-icons/fa';
 
 interface Project {
   id: number;
@@ -15,6 +15,7 @@ interface Project {
   description: string;
   tech: string[];
   featured?: boolean;
+  link?: string;
 }
 
 const projects: Project[] = [
@@ -59,9 +60,10 @@ const projects: Project[] = [
     icon: <FaShoppingBag />,
     category: 'E-commerce · Web + Mobile',
     year: '2023',
-    title: 'End-to-end e-commerce platform for a retail brand',
+    title: 'B2B e-commerce platform for a retail brand',
     description: 'Full-stack shop with custom CMS, inventory management, and companion mobile app. Cart abandonment dropped by 40% after UX redesign.',
     tech: ['Next.js', 'Stripe', 'Sanity', 'React Native'],
+    link: 'https://fromafricab2b.com/',
   },
   {
     id: 5,
@@ -85,6 +87,30 @@ const projects: Project[] = [
     description: 'Android app with background app tracking, accountability pairing, streaks, and breach alerts. Built with Flutter, Spring Boot, and MongoDB Atlas.',
     tech: ['Flutter', 'Spring Boot', 'MongoDB', 'Firebase FCM'],
   },
+  {
+    id: 7,
+    categories: 'web3',
+    bg: 'proj-bg-1',
+    icon: <FaCoins />,
+    category: 'Web3',
+    year: '2024',
+    title: 'Skillpays',
+    description: 'A decentralized application platform for Skillpays, part of the projects done by us.',
+    tech: ['Web3', 'React', 'Next.js'],
+    link: 'https://skills-pays-cehmtximg-martinsos-projects-ea3a0d1b.vercel.app',
+  },
+  {
+    id: 8,
+    categories: 'web',
+    bg: 'proj-bg-3',
+    icon: <FaTruck />,
+    category: 'E-commerce · Logistics',
+    year: '2024',
+    title: 'Solvera e-commerce & logistics platform',
+    description: 'An e-commerce platform with integrated logistics capabilities, streamlining the entire ordering and delivery process.',
+    tech: ['React', 'Next.js', 'Web'],
+    link: 'https://solvera-rosy.vercel.app/',
+  },
 ];
 
 const filters = [
@@ -93,6 +119,7 @@ const filters = [
   { label: 'Mobile', value: 'mobile' },
   { label: 'SaaS', value: 'saas' },
   { label: 'Fintech', value: 'fintech' },
+  { label: 'Web3', value: 'web3' },
 ];
 
 export default function ProjectFilter() {
@@ -127,7 +154,11 @@ export default function ProjectFilter() {
                 <div className={`proj-card-img ${proj.bg}`}>
                   <div className="proj-mockup-icon">{proj.icon}</div>
                   <div className="proj-card-img-overlay">
-                    <span className="proj-view-btn">View project</span>
+                    {proj.link ? (
+                      <a href={proj.link} target="_blank" rel="noopener noreferrer" className="proj-view-btn" style={{ textDecoration: 'none' }}>View project</a>
+                    ) : (
+                      <span className="proj-view-btn">View project</span>
+                    )}
                   </div>
                 </div>
                 <div className="proj-card-body">
