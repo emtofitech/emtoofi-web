@@ -70,7 +70,7 @@ export default function ContactForm() {
       <div className="form-group">
         <label>Budget range (USD)</label>
         <select value={formData.budget} onChange={(e) => setFormData({ ...formData, budget: e.target.value })}>
-          <option>$5k – $15k</option>
+          <option>$1.5k – $15k</option>
           <option>$15k – $40k</option>
           <option>$40k – $80k</option>
           <option>$80k+</option>
